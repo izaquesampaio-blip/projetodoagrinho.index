@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto do Agrinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Projeto do Agrinho</h1>
+        <p>Integração com p5.js e recursos interativos</p>
+    </header>
+    
+    <main>
+        <div class="card">
+            <h2>Sobre o Projeto</h2>
+            <p>Este é um projeto desenvolvido com foco em educação agrícola interativa.</p>
+            <button onclick="abrirP5js()">Abrir Projeto p5.js</button>
+            <div class="resultado" id="resultado"></div>
+        </div>
+
+        <div class="card">
+            <h2>Projeto p5.js</h2>
+            <p>Clique no botão abaixo para acessar o editor p5.js completo:</p>
+            <iframe src="https://editor.p5js.org/izaque.sampaio/full/0VDlKHQNW" 
+                    width="100%" 
+                    height="600" 
+                    style="border: 2px solid #2E7D32; border-radius: 8px;"
+                    title="Projeto p5.js Agrinho">
+            </iframe>
+        </div>
+    </main>
+
+    <script>
+        function abrirP5js() {
+            window.open('https://editor.p5js.org/izaque.sampaio/full/0VDlKHQNW', '_blank');
+            document.getElementById('resultado').textContent = '✅ Projeto p5.js aberto em nova aba!';
+        }
+    </script>
+</body>
+</html>
