@@ -3,39 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto do Agrinho</title>
+    <title>Projeto do Agrinho - Educação Agrícola Interativa</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao Projeto do Agrinho</h1>
-        <p>Integração com p5.js e recursos interativos</p>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i> Agrinho
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#projeto" class="nav-link">Projeto</a></li>
+                <li><a href="#features" class="nav-link">Recursos</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER/HERO -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>🌾 Bem-vindo ao Projeto do Agrinho</h1>
+            <p>Integração com p5.js e recursos interativos para educação agrícola</p>
+            <button class="cta-button" onclick="document.getElementById('sobre').scrollIntoView({behavior: 'smooth'})">
+                Explorar Projeto
+            </button>
+        </div>
     </header>
     
     <main>
-        <div class="card">
-            <h2>Sobre o Projeto</h2>
-            <p>Este é um projeto desenvolvido com foco em educação agrícola interativa.</p>
-            <button onclick="abrirP5js()">Abrir Projeto p5.js</button>
-            <div class="resultado" id="resultado"></div>
-        </div>
+        <!-- SOBRE -->
+        <section id="sobre" class="section">
+            <div class="container">
+                <h2 class="section-title">📚 Sobre o Projeto</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="card-icon">🌱</div>
+                        <h3>Educação Interativa</h3>
+                        <p>Desenvolvido com foco em educação agrícola interativa, combinando tecnologia e conhecimento agrário.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">💻</div>
+                        <h3>Tecnologia Moderna</h3>
+                        <p>Utiliza p5.js para criar visualizações e simulações interativas sobre agricultura sustentável.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="card">
-            <h2>Projeto p5.js</h2>
-            <p>Clique no botão abaixo para acessar o editor p5.js completo:</p>
-            <iframe src="https://editor.p5js.org/izaque.sampaio/full/0VDlKHQNW" 
-                    width="100%" 
-                    height="600" 
-                    style="border: 2px solid #2E7D32; border-radius: 8px;"
-                    title="Projeto p5.js Agrinho">
-            </iframe>
-        </div>
+        <!-- PROJETO P5.JS -->
+        <section id="projeto" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">🎨 Projeto p5.js</h2>
+                <div class="project-wrapper">
+                    <iframe src="https://editor.p5js.org/izaque.sampaio/full/0VDlKHQNW" 
+                            width="100%" 
+                            height="600" 
+                            class="p5-iframe"
+                            title="Projeto p5.js Agrinho">
+                    </iframe>
+                </div>
+                <div class="button-group">
+                    <button class="btn-primary" onclick="abrirP5js()">
+                        <i class="fas fa-external-link-alt"></i> Abrir em Nova Aba
+                    </button>
+                    <button class="btn-secondary" onclick="editarP5js()">
+                        <i class="fas fa-edit"></i> Editar Projeto
+                    </button>
+                </div>
+                <div class="resultado" id="resultado"></div>
+            </div>
+        </section>
+
+        <!-- RECURSOS -->
+        <section id="features" class="section">
+            <div class="container">
+                <h2 class="section-title">✨ Recursos Principais</h2>
+                <div class="grid-3">
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Visualizações</h3>
+                        <p>Gráficos e animações interativas sobre dados agrícolas</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Educação</h3>
+                        <p>Conteúdo educativo sobre sustentabilidade agrícola</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Responsivo</h3>
+                        <p>Funciona em todos os dispositivos e tamanhos de tela</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Open Source</h3>
+                        <p>Código disponível no GitHub para contribuições</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Sustentabilidade</h3>
+                        <p>Foco em práticas agrícolas sustentáveis e modernas</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Comunidade</h3>
+                        <p>Desenvolvido colaborativamente com a comunidade agrícola</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section id="contato" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">📞 Contato</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-github"></i>
+                            <a href="https://github.com/izaquesampaio-blip" target="_blank">
+                                GitHub
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-code"></i>
+                            <a href="https://editor.p5js.org/izaque.sampaio" target="_blank">
+                                p5.js Profile
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Projeto do Agrinho</h4>
+                <p>Educação agrícola interativa com tecnologia moderna</p>
+            </div>
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projeto">Projeto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Redes Sociais</h4>
+                <div class="social-links">
+                    <a href="https://github.com/izaquesampaio-blip" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Projeto do Agrinho. Desenvolvido com <i class="fas fa-heart"></i> por Izaque Sampaio</p>
+        </div>
+    </footer>
+
     <script>
+        // HAMBURGER MENU
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // FECHAR MENU AO CLICAR EM LINK
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // NAVBAR STICKY
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+            }
+        });
+
+        // FUNÇÃO: ABRIR P5.JS
         function abrirP5js() {
             window.open('https://editor.p5js.org/izaque.sampaio/full/0VDlKHQNW', '_blank');
             document.getElementById('resultado').textContent = '✅ Projeto p5.js aberto em nova aba!';
+            setTimeout(() => {
+                document.getElementById('resultado').textContent = '';
+            }, 3000);
+        }
+
+        // FUNÇÃO: EDITAR P5.JS
+        function editarP5js() {
+            window.open('https://editor.p5js.org/izaque.sampaio/sketches/0VDlKHQNW', '_blank');
+            document.getElementById('resultado').textContent = '✏️ Editor p5.js aberto!';
+            setTimeout(() => {
+                document.getElementById('resultado').textContent = '';
+            }, 3000);
         }
     </script>
 </body>
