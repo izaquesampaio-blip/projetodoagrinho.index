@@ -8,16 +8,21 @@
     
     <!-- SEO META TAGS -->
     <meta name="description" content="Educação agrícola interativa com tecnologia moderna. Explore visualizações, simulações e recursos educativos sobre agricultura sustentável.">
-    <meta name="keywords" content="agricultura, educação, sustentabilidade, interativo, agrinho, farming">
+    <meta name="keywords" content="agricultura, educação, sustentabilidade, interativo, agrinho, farming, p5.js">
     <meta name="author" content="Izaque Sampaio">
     <meta name="theme-color" content="#2E7D32">
     <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Agrinho">
     
     <!-- OPEN GRAPH (REDES SOCIAIS) -->
     <meta property="og:title" content="Projeto do Agrinho - Educação Agrícola Interativa">
     <meta property="og:description" content="Integração com tecnologia e recursos interativos para educação agrícola sustentável">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://izaquesampaio-blip.github.io/projetodoagrinho.index/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Projeto do Agrinho">
     
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
@@ -29,18 +34,79 @@
     
     <!-- FAVICON -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%232E7D32' width='180' height='180' rx='45'/><text x='90' y='130' font-size='90' text-anchor='middle' fill='white'>🌾</text></svg>">
     
-    <!-- PRECONNECT PARA RECURSOS EXTERNOS -->
+    <!-- PWA MANIFEST -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- PRECONNECT E DNS-PREFETCH -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://editor.p5js.org">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://github.com">
+    
+    <!-- PRELOAD CRÍTICOS -->
+    <link rel="preload" as="style" href="style.css">
+    <link rel="preload" as="script" href="script.js">
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usKGiOW03OnNP4VE8xsQvMmOVst25dBsabqB+yLT+xLikRoQZSQM8qQXvLzlYA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     
+    <!-- SCHEMA.ORG JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalWebApplication",
+      "name": "Projeto do Agrinho",
+      "description": "Educação agrícola interativa com tecnologia moderna para um futuro sustentável",
+      "url": "https://izaquesampaio-blip.github.io/projetodoagrinho.index/",
+      "author": {
+        "@type": "Person",
+        "name": "Izaque Sampaio",
+        "url": "https://github.com/izaquesampaio-blip"
+      },
+      "applicationCategory": "EducationalApplication",
+      "inLanguage": "pt-BR",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "1"
+      }
+    }
+    </script>
+    
+    <!-- SCHEMA.ORG ORGANIZATION -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Projeto do Agrinho",
+      "url": "https://izaquesampaio-blip.github.io/projetodoagrinho.index/",
+      "logo": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>",
+      "sameAs": [
+        "https://github.com/izaquesampaio-blip",
+        "https://editor.p5js.org/izaque.sampaio"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "General Support",
+        "url": "https://github.com/izaquesampaio-blip"
+      }
+    }
+    </script>
+    
     <title>Projeto do Agrinho - Educação Agrícola Interativa</title>
 </head>
 <body>
+    <!-- SKIP TO MAIN CONTENT LINK (ACESSIBILIDADE) -->
+    <a href="#main-content" class="skip-to-main">Pular para conteúdo principal</a>
+    
     <!-- NAVBAR -->
     <nav class="navbar" role="navigation" aria-label="Navegação principal">
         <div class="nav-container">
@@ -73,7 +139,7 @@
         </div>
     </header>
     
-    <main>
+    <main id="main-content">
         <!-- SOBRE -->
         <section id="sobre" class="section" aria-labelledby="sobre-title">
             <div class="container">
@@ -186,6 +252,22 @@
         </div>
     </footer>
 
+    <!-- SCRIPTS -->
     <script src="script.js" defer></script>
+    
+    <!-- SERVICE WORKER REGISTRATION -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(registration => {
+                        console.log('✅ Service Worker registrado:', registration);
+                    })
+                    .catch(error => {
+                        console.log('⚠️ Erro ao registrar SW:', error);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
