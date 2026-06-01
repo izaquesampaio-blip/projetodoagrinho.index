@@ -36,6 +36,24 @@ body {
 }
 
 /* ===== ACESSIBILIDADE ===== */
+/* Skip to main content link */
+.skip-to-main {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--verde-agro);
+    color: var(--branco);
+    padding: 8px 16px;
+    z-index: 10000;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+    font-weight: 600;
+}
+
+.skip-to-main:focus {
+    top: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
