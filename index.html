@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- META TAGS ESSENCIAIS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto do Agrinho - Educação Agrícola Interativa</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- SEO META TAGS -->
+    <meta name="description" content="Educação agrícola interativa com p5.js. Explore visualizações, simulações e recursos educativos sobre agricultura sustentável.">
+    <meta name="keywords" content="agricultura, educação, p5.js, sustentabilidade, interativo, agrinho">
+    <meta name="author" content="Izaque Sampaio">
+    <meta name="theme-color" content="#2E7D32">
+    
+    <!-- OPEN GRAPH (REDES SOCIAIS) -->
+    <meta property="og:title" content="Projeto do Agrinho - Educação Agrícola Interativa">
+    <meta property="og:description" content="Integração com p5.js e recursos interativos para educação agrícola sustentável">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://izaquesampaio-blip.github.io/projetodoagrinho.index/">
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projeto do Agrinho">
+    <meta name="twitter:description" content="Educação agrícola interativa com p5.js">
+    
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://izaquesampaio-blip.github.io/projetodoagrinho.index/">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usKGiOW03OnNP4VE8xsQvMmOVst25dBsabqB+yLT+xLikRoQZSQM8qQXvLzlYA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <title>Projeto do Agrinho - Educação Agrícola Interativa</title>
 </head>
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Navegação principal">
         <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-leaf"></i> Agrinho
+            <div class="nav-logo" role="banner">
+                <i class="fas fa-leaf" aria-hidden="true"></i> 
+                <span>Agrinho</span>
             </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#inicio" class="nav-link">Início</a></li>
-                <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li><a href="#projeto" class="nav-link">Projeto</a></li>
-                <li><a href="#features" class="nav-link">Recursos</a></li>
-                <li><a href="#contato" class="nav-link">Contato</a></li>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="#inicio" class="nav-link" role="menuitem">Início</a></li>
+                <li role="none"><a href="#sobre" class="nav-link" role="menuitem">Sobre</a></li>
+                <li role="none"><a href="#projeto" class="nav-link" role="menuitem">Projeto</a></li>
+                <li role="none"><a href="#features" class="nav-link" role="menuitem">Recursos</a></li>
+                <li role="none"><a href="#contato" class="nav-link" role="menuitem">Contato</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
         </div>
     </nav>
 
@@ -34,7 +63,7 @@
         <div class="hero-content">
             <h1>🌾 Bem-vindo ao Projeto do Agrinho</h1>
             <p>Integração com p5.js e recursos interativos para educação agrícola</p>
-            <button class="cta-button" onclick="document.getElementById('sobre').scrollIntoView({behavior: 'smooth'})">
+            <button class="cta-button" aria-label="Explorar projeto e ver mais informações">
                 Explorar Projeto
             </button>
         </div>
@@ -42,17 +71,17 @@
     
     <main>
         <!-- SOBRE -->
-        <section id="sobre" class="section">
+        <section id="sobre" class="section" aria-labelledby="sobre-title">
             <div class="container">
-                <h2 class="section-title">📚 Sobre o Projeto</h2>
+                <h2 class="section-title" id="sobre-title">📚 Sobre o Projeto</h2>
                 <div class="grid-2">
                     <div class="card">
-                        <div class="card-icon">🌱</div>
+                        <div class="card-icon" aria-hidden="true">🌱</div>
                         <h3>Educação Interativa</h3>
                         <p>Desenvolvido com foco em educação agrícola interativa, combinando tecnologia e conhecimento agrário.</p>
                     </div>
                     <div class="card">
-                        <div class="card-icon">💻</div>
+                        <div class="card-icon" aria-hidden="true">💻</div>
                         <h3>Tecnologia Moderna</h3>
                         <p>Utiliza p5.js para criar visualizações e simulações interativas sobre agricultura sustentável.</p>
                     </div>
@@ -61,61 +90,63 @@
         </section>
 
         <!-- PROJETO P5.JS -->
-        <section id="projeto" class="section bg-light">
+        <section id="projeto" class="section bg-light" aria-labelledby="projeto-title">
             <div class="container">
-                <h2 class="section-title">🎨 Projeto p5.js</h2>
+                <h2 class="section-title" id="projeto-title">🎨 Projeto p5.js</h2>
                 <div class="project-wrapper">
                     <iframe src="https://editor.p5js.org/izaque.sampaio/full/0VDlKHQNW" 
                             width="100%" 
                             height="600" 
                             class="p5-iframe"
-                            title="Projeto p5.js Agrinho">
+                            title="Projeto p5.js - Educação Agrícola Interativa"
+                            loading="lazy"
+                            allow="accelerometer; ambient-light-sensor; camera; geolocation; gyroscope; magnetometer; microphone; payment; usb">
                     </iframe>
                 </div>
                 <div class="button-group">
-                    <button class="btn-primary" onclick="abrirP5js()">
-                        <i class="fas fa-external-link-alt"></i> Abrir em Nova Aba
+                    <button class="btn-primary" id="btnAbrirP5" aria-label="Abrir projeto p5.js em nova aba">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Abrir em Nova Aba
                     </button>
-                    <button class="btn-secondary" onclick="editarP5js()">
-                        <i class="fas fa-edit"></i> Editar Projeto
+                    <button class="btn-secondary" id="btnEditarP5" aria-label="Abrir editor p5.js para editar projeto">
+                        <i class="fas fa-edit" aria-hidden="true"></i> Editar Projeto
                     </button>
                 </div>
-                <div class="resultado" id="resultado"></div>
+                <div class="resultado" id="resultado" role="status" aria-live="polite" aria-atomic="true"></div>
             </div>
         </section>
 
         <!-- RECURSOS -->
-        <section id="features" class="section">
+        <section id="features" class="section" aria-labelledby="features-title">
             <div class="container">
-                <h2 class="section-title">✨ Recursos Principais</h2>
+                <h2 class="section-title" id="features-title">✨ Recursos Principais</h2>
                 <div class="grid-3">
                     <div class="feature-card">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-chart-line" aria-hidden="true"></i>
                         <h3>Visualizações</h3>
                         <p>Gráficos e animações interativas sobre dados agrícolas</p>
                     </div>
                     <div class="feature-card">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                         <h3>Educação</h3>
                         <p>Conteúdo educativo sobre sustentabilidade agrícola</p>
                     </div>
                     <div class="feature-card">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                         <h3>Responsivo</h3>
                         <p>Funciona em todos os dispositivos e tamanhos de tela</p>
                     </div>
                     <div class="feature-card">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-code" aria-hidden="true"></i>
                         <h3>Open Source</h3>
                         <p>Código disponível no GitHub para contribuições</p>
                     </div>
                     <div class="feature-card">
-                        <i class="fas fa-leaf"></i>
+                        <i class="fas fa-leaf" aria-hidden="true"></i>
                         <h3>Sustentabilidade</h3>
                         <p>Foco em práticas agrícolas sustentáveis e modernas</p>
                     </div>
                     <div class="feature-card">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-users" aria-hidden="true"></i>
                         <h3>Comunidade</h3>
                         <p>Desenvolvido colaborativamente com a comunidade agrícola</p>
                     </div>
@@ -124,20 +155,20 @@
         </section>
 
         <!-- CONTATO -->
-        <section id="contato" class="section bg-light">
+        <section id="contato" class="section bg-light" aria-labelledby="contato-title">
             <div class="container">
-                <h2 class="section-title">📞 Contato</h2>
+                <h2 class="section-title" id="contato-title">📞 Contato</h2>
                 <div class="contact-container">
                     <div class="contact-info">
                         <div class="contact-item">
-                            <i class="fas fa-github"></i>
-                            <a href="https://github.com/izaquesampaio-blip" target="_blank">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            <a href="https://github.com/izaquesampaio-blip" target="_blank" rel="noopener noreferrer">
                                 GitHub
                             </a>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-code"></i>
-                            <a href="https://editor.p5js.org/izaque.sampaio" target="_blank">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                            <a href="https://editor.p5js.org/izaque.sampaio" target="_blank" rel="noopener noreferrer">
                                 p5.js Profile
                             </a>
                         </div>
@@ -148,79 +179,36 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>Projeto do Agrinho</h4>
+                <h3>Projeto do Agrinho</h3>
                 <p>Educação agrícola interativa com tecnologia moderna</p>
             </div>
             <div class="footer-section">
-                <h4>Links Rápidos</h4>
+                <h3>Links Rápidos</h3>
                 <ul>
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#projeto">Projeto</a></li>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Redes Sociais</h4>
+                <h3>Redes Sociais</h3>
                 <div class="social-links">
-                    <a href="https://github.com/izaquesampaio-blip" target="_blank" title="GitHub">
-                        <i class="fab fa-github"></i>
+                    <a href="https://github.com/izaquesampaio-blip" target="_blank" rel="noopener noreferrer" aria-label="Visite GitHub de Izaque Sampaio">
+                        <i class="fab fa-github" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Projeto do Agrinho. Desenvolvido com <i class="fas fa-heart"></i> por Izaque Sampaio</p>
+            <p>&copy; 2026 Projeto do Agrinho. Desenvolvido com <i class="fas fa-heart" aria-hidden="true"></i> por Izaque Sampaio</p>
         </div>
     </footer>
 
-    <script>
-        // HAMBURGER MENU
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-
-        // FECHAR MENU AO CLICAR EM LINK
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
-        });
-
-        // NAVBAR STICKY
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('sticky');
-            } else {
-                navbar.classList.remove('sticky');
-            }
-        });
-
-        // FUNÇÃO: ABRIR P5.JS
-        function abrirP5js() {
-            window.open('https://editor.p5js.org/izaque.sampaio/full/0VDlKHQNW', '_blank');
-            document.getElementById('resultado').textContent = '✅ Projeto p5.js aberto em nova aba!';
-            setTimeout(() => {
-                document.getElementById('resultado').textContent = '';
-            }, 3000);
-        }
-
-        // FUNÇÃO: EDITAR P5.JS
-        function editarP5js() {
-            window.open('https://editor.p5js.org/izaque.sampaio/sketches/0VDlKHQNW', '_blank');
-            document.getElementById('resultado').textContent = '✏️ Editor p5.js aberto!';
-            setTimeout(() => {
-                document.getElementById('resultado').textContent = '';
-            }, 3000);
-        }
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>
