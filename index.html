@@ -7,27 +7,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <!-- SEO META TAGS -->
-    <meta name="description" content="Educação agrícola interativa com p5.js. Explore visualizações, simulações e recursos educativos sobre agricultura sustentável.">
-    <meta name="keywords" content="agricultura, educação, p5.js, sustentabilidade, interativo, agrinho">
+    <meta name="description" content="Educação agrícola interativa com tecnologia moderna. Explore visualizações, simulações e recursos educativos sobre agricultura sustentável.">
+    <meta name="keywords" content="agricultura, educação, sustentabilidade, interativo, agrinho, farming">
     <meta name="author" content="Izaque Sampaio">
     <meta name="theme-color" content="#2E7D32">
+    <meta name="mobile-web-app-capable" content="yes">
     
     <!-- OPEN GRAPH (REDES SOCIAIS) -->
     <meta property="og:title" content="Projeto do Agrinho - Educação Agrícola Interativa">
-    <meta property="og:description" content="Integração com p5.js e recursos interativos para educação agrícola sustentável">
+    <meta property="og:description" content="Integração com tecnologia e recursos interativos para educação agrícola sustentável">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://izaquesampaio-blip.github.io/projetodoagrinho.index/">
     
     <!-- TWITTER CARD -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Projeto do Agrinho">
-    <meta name="twitter:description" content="Educação agrícola interativa com p5.js">
+    <meta name="twitter:description" content="Educação agrícola interativa com recursos modernos">
     
     <!-- CANONICAL -->
     <link rel="canonical" href="https://izaquesampaio-blip.github.io/projetodoagrinho.index/">
     
     <!-- FAVICON -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>">
+    
+    <!-- PRECONNECT PARA RECURSOS EXTERNOS -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -46,11 +51,10 @@
             <ul class="nav-menu" id="navMenu" role="menubar">
                 <li role="none"><a href="#inicio" class="nav-link" role="menuitem">Início</a></li>
                 <li role="none"><a href="#sobre" class="nav-link" role="menuitem">Sobre</a></li>
-                <li role="none"><a href="#projeto" class="nav-link" role="menuitem">Projeto</a></li>
                 <li role="none"><a href="#features" class="nav-link" role="menuitem">Recursos</a></li>
                 <li role="none"><a href="#contato" class="nav-link" role="menuitem">Contato</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
@@ -62,7 +66,7 @@
     <header id="inicio" class="hero">
         <div class="hero-content">
             <h1>🌾 Bem-vindo ao Projeto do Agrinho</h1>
-            <p>Integração com p5.js e recursos interativos para educação agrícola</p>
+            <p>Educação agrícola interativa com tecnologia moderna para um futuro sustentável</p>
             <button class="cta-button" aria-label="Explorar projeto e ver mais informações">
                 Explorar Projeto
             </button>
@@ -78,98 +82,72 @@
                     <div class="card">
                         <div class="card-icon" aria-hidden="true">🌱</div>
                         <h3>Educação Interativa</h3>
-                        <p>Desenvolvido com foco em educação agrícola interativa, combinando tecnologia e conhecimento agrário.</p>
+                        <p>Desenvolvido com foco em educação agrícola interativa, combinando tecnologia avançada e conhecimento agrário para transformar o aprendizado.</p>
                     </div>
                     <div class="card">
                         <div class="card-icon" aria-hidden="true">💻</div>
                         <h3>Tecnologia Moderna</h3>
-                        <p>Utiliza p5.js para criar visualizações e simulações interativas sobre agricultura sustentável.</p>
+                        <p>Utiliza ferramentas e plataformas modernas para criar visualizações interativas sobre agricultura sustentável e inovadora.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROJETO P5.JS -->
-        <section id="projeto" class="section bg-light" aria-labelledby="projeto-title">
-            <div class="container">
-                <h2 class="section-title" id="projeto-title">🎨 Projeto p5.js</h2>
-                <div class="project-wrapper">
-                    <iframe src="https://editor.p5js.org/izaque.sampaio/full/0VDlKHQNW" 
-                            width="100%" 
-                            height="600" 
-                            class="p5-iframe"
-                            title="Projeto p5.js - Educação Agrícola Interativa"
-                            loading="lazy"
-                            allow="accelerometer; ambient-light-sensor; camera; geolocation; gyroscope; magnetometer; microphone; payment; usb">
-                    </iframe>
-                </div>
-                <div class="button-group">
-                    <button class="btn-primary" id="btnAbrirP5" aria-label="Abrir projeto p5.js em nova aba">
-                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Abrir em Nova Aba
-                    </button>
-                    <button class="btn-secondary" id="btnEditarP5" aria-label="Abrir editor p5.js para editar projeto">
-                        <i class="fas fa-edit" aria-hidden="true"></i> Editar Projeto
-                    </button>
-                </div>
-                <div class="resultado" id="resultado" role="status" aria-live="polite" aria-atomic="true"></div>
-            </div>
-        </section>
-
         <!-- RECURSOS -->
-        <section id="features" class="section" aria-labelledby="features-title">
+        <section id="features" class="section bg-light" aria-labelledby="features-title">
             <div class="container">
                 <h2 class="section-title" id="features-title">✨ Recursos Principais</h2>
                 <div class="grid-3">
                     <div class="feature-card">
                         <i class="fas fa-chart-line" aria-hidden="true"></i>
                         <h3>Visualizações</h3>
-                        <p>Gráficos e animações interativas sobre dados agrícolas</p>
+                        <p>Gráficos e análises interativas sobre dados agrícolas em tempo real</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                         <h3>Educação</h3>
-                        <p>Conteúdo educativo sobre sustentabilidade agrícola</p>
+                        <p>Conteúdo educativo completo sobre sustentabilidade agrícola</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                         <h3>Responsivo</h3>
-                        <p>Funciona em todos os dispositivos e tamanhos de tela</p>
+                        <p>Interface otimizada para todos os dispositivos e tamanhos de tela</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-code" aria-hidden="true"></i>
                         <h3>Open Source</h3>
-                        <p>Código disponível no GitHub para contribuições</p>
+                        <p>Código disponível no GitHub para contribuições da comunidade</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-leaf" aria-hidden="true"></i>
                         <h3>Sustentabilidade</h3>
-                        <p>Foco em práticas agrícolas sustentáveis e modernas</p>
+                        <p>Foco em práticas agrícolas sustentáveis e inovadoras</p>
                     </div>
                     <div class="feature-card">
                         <i class="fas fa-users" aria-hidden="true"></i>
                         <h3>Comunidade</h3>
-                        <p>Desenvolvido colaborativamente com a comunidade agrícola</p>
+                        <p>Desenvolvido colaborativamente com agricultores e educadores</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- CONTATO -->
-        <section id="contato" class="section bg-light" aria-labelledby="contato-title">
+        <section id="contato" class="section" aria-labelledby="contato-title">
             <div class="container">
-                <h2 class="section-title" id="contato-title">📞 Contato</h2>
+                <h2 class="section-title" id="contato-title">📞 Contato e Links</h2>
                 <div class="contact-container">
                     <div class="contact-info">
                         <div class="contact-item">
                             <i class="fab fa-github" aria-hidden="true"></i>
-                            <a href="https://github.com/izaquesampaio-blip" target="_blank" rel="noopener noreferrer">
-                                GitHub
+                            <a href="https://github.com/izaquesampaio-blip" target="_blank" rel="noopener noreferrer" aria-label="Visite nosso repositório no GitHub">
+                                Visite nosso GitHub
                             </a>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-code" aria-hidden="true"></i>
-                            <a href="https://editor.p5js.org/izaque.sampaio" target="_blank" rel="noopener noreferrer">
-                                p5.js Profile
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            <a href="https://izaquesampaio-blip.github.io/" target="_blank" rel="noopener noreferrer" aria-label="Visite o portfólio">
+                                Portfólio
                             </a>
                         </div>
                     </div>
@@ -183,14 +161,13 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Projeto do Agrinho</h3>
-                <p>Educação agrícola interativa com tecnologia moderna</p>
+                <p>Educação agrícola interativa com tecnologia moderna para um futuro sustentável</p>
             </div>
             <div class="footer-section">
                 <h3>Links Rápidos</h3>
                 <ul>
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#projeto">Projeto</a></li>
                     <li><a href="#features">Recursos</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
