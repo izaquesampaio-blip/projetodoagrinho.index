@@ -1,0 +1,27 @@
+# Robots.txt para Projeto do Agrinho
+# Gerado para otimizar SEO e controlar indexação
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://izaquesampaio-blip.github.io/projetodoagrinho.index/sitemap.xml
+Sitemap: https://izaquesampaio-blip.github.io/projetodoagrinho.index/sitemap-images.xml
+
+# Otimizações específicas
+User-agent: *
+Crawl-delay: 0
+Request-rate: 30/60
